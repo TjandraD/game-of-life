@@ -22,4 +22,14 @@ public class GridTest {
 
         assertEquals(currentGrid[0][0], neighbourList[0]);
     }
+
+    @Test
+    public void testIsAlive() {
+        Grid grid = new Grid();
+        grid.initializeGrid();
+
+        int [] neighbourList = { 1, 1, 1, 0, 0, 0, 0, 0 };
+
+        assertEquals(true, grid.checkIsAlive(neighbourList));
+    }
 }
