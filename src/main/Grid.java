@@ -36,8 +36,8 @@ public class Grid {
 
     public boolean checkIsAlive(int [] neighbourList, int currentItem) {
         int aliveCount = 0;
-        for (int i = 0; i < neighbourList.length; i++) {
-            if (i == 1) aliveCount++;
+        for (int j : neighbourList) {
+            if (j == 1) aliveCount++;
         }
 
         if (currentItem == 0) {
