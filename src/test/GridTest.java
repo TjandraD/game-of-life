@@ -9,7 +9,7 @@ public class GridTest {
         Grid grid = new Grid();
         grid.initializeGrid();
 
-        assertEquals(10, grid.getCurrentArray().length);
+        assertEquals(10, grid.getCurrentGrid().length);
     }
 
     @Test
@@ -17,7 +17,7 @@ public class GridTest {
         Grid grid = new Grid();
         grid.initializeGrid();
 
-        int [][] currentGrid = grid.getCurrentArray();
+        int [][] currentGrid = grid.getCurrentGrid();
         int [] neighbourList = grid.listNeighbours(1, 1);
 
         assertEquals(currentGrid[0][0], neighbourList[0]);
@@ -37,11 +37,11 @@ public class GridTest {
         Grid grid = new Grid();
         grid.initializeGrid();
 
-        int [][] oldGrid = grid.getCurrentArray();
+        int [][] oldGrid = grid.getCurrentGrid();
 
         grid.generateNextGeneration();
 
-        int [][] currentGrid = grid.getCurrentArray();
+        int [][] currentGrid = grid.getCurrentGrid();
 
         assertNotEquals(oldGrid, currentGrid);
     }
