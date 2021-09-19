@@ -17,4 +17,20 @@ public class Grid {
             }
         }
     }
+
+    public int [] listNeighbours(int itemRow, int itemColumn) {
+        int [] currentNeighbours = new int[8];
+        int currentItemPosition = 0;
+
+        for (int neighbourRow = itemRow - 1; neighbourRow <= itemRow + 1; neighbourRow++) {
+            for (int neighbourColumn = itemColumn - 1; neighbourColumn <= itemColumn + 1; neighbourColumn++) {
+                if (neighbourRow == itemRow && neighbourColumn == itemColumn) continue;
+
+                currentNeighbours[currentItemPosition] = currentArray[neighbourRow][neighbourColumn];
+                currentItemPosition++;
+            }
+        }
+
+        return currentNeighbours;
+    }
 }
