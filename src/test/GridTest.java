@@ -5,9 +5,10 @@ import static org.junit.Assert.*;
 
 public class GridTest {
     @Test
-    void testInitializeGrid() {
+    public void testInitializeGrid() {
         Grid grid = new Grid();
         grid.initializeGrid();
-        assertEquals(10, grid.a);
+
+        assertEquals(10, grid.getCurrentArray().length);
     }
 }
