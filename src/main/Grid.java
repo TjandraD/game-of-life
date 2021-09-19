@@ -2,7 +2,7 @@ package main;
 import java.util.Random;
 
 public class Grid {
-    private int [][] currentArray = new int[10][10];
+    private final int [][] currentArray = new int[10][10];
 
     public int[][] getCurrentArray() {
         return currentArray;
@@ -32,5 +32,18 @@ public class Grid {
         }
 
         return currentNeighbours;
+    }
+
+    public boolean checkIsAlive(int [] neighbourList, int currentItem) {
+        int aliveCount = 0;
+        for (int i = 0; i < neighbourList.length; i++) {
+            if (i == 1) aliveCount++;
+        }
+
+        if (currentItem == 0) {
+            return aliveCount == 3;
+        } else {
+            return aliveCount == 2 | aliveCount == 3;
+        }
     }
 }

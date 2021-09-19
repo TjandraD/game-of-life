@@ -26,10 +26,9 @@ public class GridTest {
     @Test
     public void testIsAlive() {
         Grid grid = new Grid();
-        grid.initializeGrid();
 
         int [] neighbourList = { 1, 1, 1, 0, 0, 0, 0, 0 };
 
-        assertEquals(true, grid.checkIsAlive(neighbourList));
+        assertTrue(grid.checkIsAlive(neighbourList, 1));
     }
 }
