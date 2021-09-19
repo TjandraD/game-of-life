@@ -1,6 +1,6 @@
 package main;
 
-public class GameOfLife {
+public class Grid {
     public static void main(String[] args) {
 
     }
