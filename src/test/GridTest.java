@@ -31,4 +31,18 @@ public class GridTest {
 
         assertTrue(grid.checkIsAlive(neighbourList, 1));
     }
+
+    @Test
+    public void testNextGeneration() {
+        Grid grid = new Grid();
+        grid.initializeGrid();
+
+        int [][] oldGrid = grid.getCurrentArray();
+
+        grid.generateNextGeneration();
+
+        int [][] currentGrid = grid.getCurrentArray();
+
+        assertNotEquals(oldGrid, currentGrid);
+    }
 }
